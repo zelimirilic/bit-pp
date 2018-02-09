@@ -1,13 +1,17 @@
 function prostBroj(num) {
-
-    for (var i=0; i<num; i++){
-
-    if (num % i !== 0 || num <= 2) {
+    if (num === 1) {
+        return false;
+    } else if (num === 2) {
+        return true;
+    } else {
+        for (var i = 2; i < num; i++) {
+            if (num % i === 0) {
+                return false;
+            }  
+        }
 
         return true;
     }
 }
-return false;
-}
 
-console.log(prostBroj(10));
+    console.log(prostBroj(9));
