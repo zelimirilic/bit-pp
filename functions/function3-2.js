@@ -5,13 +5,13 @@ function skipEl(arr) {
         
         if( arr[i] === undefined ||  arr[i] === null || !!arr[i] === !!NaN || arr[i] === Infinity) {
         
-    } else {
-        newStr += arr[i];
+        } else {
+            newStr += arr[i];
+        }
+        
+        }
+    return newStr;
     }
     
-    }
-return newStr;
-}
-
-console.log(skipEl([null, 23, 'nekaRec', 'jaja', undefined, true, false, 43, '456', NaN, -24, NaN ]));
+    console.log(skipEl([null, 23, 'nekaRec', 'jaja', undefined, true, false, 43, '456', NaN, -24, NaN ]));
 
