@@ -1,4 +1,5 @@
 
+"use strict";
 function zvezdice(a,b,c){
 
     var z1 = "";

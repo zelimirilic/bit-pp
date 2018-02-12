@@ -1,3 +1,4 @@
+"use strict";
 function num(x) {
     if (x > 99 && x < 1000) {
         return x + " is 3 digit number!";

@@ -1,3 +1,4 @@
+"use strict";
 function sum(a, b) {
     if (a > b) {
         return a;

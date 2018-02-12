@@ -1,3 +1,4 @@
+"use strict";
 function isString(rec) {
     var odgovor = '';
     if (typeof rec === 'string') {

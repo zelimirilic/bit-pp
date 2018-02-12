@@ -1,3 +1,4 @@
+"use strict";
 function odd(x) {
 
     if (x % 2 !== 0) {

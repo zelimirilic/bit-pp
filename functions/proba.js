@@ -1,4 +1,5 @@
-function isString(rec) {
+"use strict";
+ function isString(rec) {
 
     var answer = typeof rec === 'string';
         

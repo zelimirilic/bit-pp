@@ -1,5 +1,5 @@
 
-
+"use strict";
 function sum(nekiNiz) {
     var odd = 0;
     for (var i=0; i<nekiNiz.length; i++) {

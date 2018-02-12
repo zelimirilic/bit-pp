@@ -1,3 +1,4 @@
+"use strict";
 function multiString(rec, brojPuta) {
 
 var nasaRec="";

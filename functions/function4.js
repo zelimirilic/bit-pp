@@ -1,3 +1,4 @@
+"use strict";
 function avg(a, b, c, d) {
 
     var x = (a + b + c + d) / 4
