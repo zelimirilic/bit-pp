@@ -10,4 +10,4 @@ function occ(str, char) {
         return -1;
 }
 
-console.log(occ("mythokmk", "m"));
+console.log(occ("mythokmkm", "m"));
