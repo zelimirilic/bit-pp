@@ -3,16 +3,16 @@
 
 var a = [8, 13, 8, 9, 12, 8, 1, 1, 4, 13];
 var b = a.sort();
+var newArr = [];
+var count = 0;
 console.log(b);
 
-for (var i = 0; i < b.length; i++) {
-    for (var j=i; j< b.length; j++) {  
-    if (b[i] === b[j]) {
-        var c = b.pop(b[i]);
+for (var i = 0, j = 1; i < b.length; i++ , j++) {
+        if (b[i] !== b[j]) {
+            newArr[count] = b[i];
+            count++;
+        }
     }
-    }
-}
 
+console.log(newArr);
 
-
-console.log(c);

@@ -10,4 +10,25 @@ For example the list ["Hello", "World", "in", "a", "frame"] gets printed as:
 *********
 */
 'use strict';
+function printRec(arr) {
+    //var arr1 = String(arr);
+    var stars = '*';
+    var picture = '';
+    var newline = '\n';
+    for (var i = 0; i < arr.length + 2; i++) {
+        for (var j = 0; j < arr.length + 2; j++) {
+            if (i === 0 || i === arr.length + 1) {
+                picture += stars;
+            } else if (j === 0 || j === arr.length + 1) {
+                picture += stars;
+            } else {
+                picture += arr[i];
+            }
+        }
+        picture += newline;
+    }
+    return picture;
+}
+
+console.log(printRec(["Hello", "World", "in", "a", "frame"]));
 
