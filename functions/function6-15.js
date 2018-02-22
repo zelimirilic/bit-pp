@@ -22,7 +22,11 @@ function printRec(arr) {
             } else if (j === 0 || j === arr.length + 1) {
                 picture += stars;
             } else {
-                picture += arr[i];
+                for (var k = 0; k < arr.length; k++) {
+                    
+                        picture += arr[k];
+                    
+                }
             }
         }
         picture += newline;
