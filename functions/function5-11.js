@@ -5,14 +5,17 @@
 
 function palindrome(str) {
     var str = str.toLowerCase();
-    for (var i = 0; i < str.length; i++) {
-        if (str.charAt(i) !== str.charAt(str.length - 1)) {
-           // ne radi popraviti !!!
-
-        }
-        
+    var newStr = '';
+    for (var i = str.length - 1; i >= 0; i--) {
+        newStr += str[i];
     }
-    return true;
+    if (str === newStr) {
+        return true;
 
+    }
+
+    return false;
 }
-console.log(palindrome("eywerte"));
+
+
+console.log(palindrome("eye"));
