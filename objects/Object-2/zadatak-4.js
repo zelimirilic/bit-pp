@@ -3,12 +3,14 @@
 'use strict';
 
 function findSmalest(arr) {
-    var minvalue = [];
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i] < minvalue) {
-            minvalue = arr[i];
-        }
+    var minvalue = Math.min.apply(null, arr);
+    var minIndex = arr.lastIndexOf(minvalue);
+    var obj = {
+        minNumber: minvalue,
+        lastPos: minIndex
     }
-    return minvalue;
+
+
+    return obj;
 }
-console.log(findSmalest[2, 3, 1, 9, 8]);
+console.log(findSmalest([2, 3, 4, 9, 8, 2, 1, 4, 8, 7, 9, 11]));
