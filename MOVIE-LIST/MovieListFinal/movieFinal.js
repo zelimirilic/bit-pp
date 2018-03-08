@@ -68,6 +68,7 @@ function createMovie() {
     totalTime(getMovieLength(movieList));
     addMovieToDropdown(movie);
     movieCounter++;
+    
 }
 
 function addMovieToDropdown(movie) {
