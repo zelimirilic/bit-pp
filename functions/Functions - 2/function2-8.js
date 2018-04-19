@@ -14,4 +14,4 @@ function prostBroj(num) {
     }
 }
 
-    console.log(prostBroj(9));
+    console.log(prostBroj(37));

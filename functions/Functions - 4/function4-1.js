@@ -17,5 +17,5 @@ function findElement(arr, item) {
     return answer;
 }
 
-console.log(findElement([5, -4.2, 3, 7], 8));
+console.log(findElement([5, -4.2, 3, 7], 5));
 

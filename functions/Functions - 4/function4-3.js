@@ -12,5 +12,5 @@ function minItem(arr) {
     return 'minimalni broj je ' + minItem + ' a njegov index je ' + indexOfNum;
 }
 
-console.log(minItem([4, -21, 2, -1, 6, 8, 5, 0, -1]));
+console.log(minItem([4, 21, 2, -15, 6, 8, 5, 0, -1]));
 
