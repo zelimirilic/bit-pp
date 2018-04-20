@@ -1,4 +1,4 @@
-// from number to string
+// result is undefined and 2
 
 function test() {
     console.log(a);
