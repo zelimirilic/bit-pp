@@ -1,13 +1,8 @@
-// from number to string
 
-function test() {
-    console.log(a);
-    console.log(foo());
+let arr = [10, 300, 50, 40];
 
-    var a = 1;
-    function foo() {
-        return 2;
-    }
-}
-
-test();
+let average = numbers => {
+    let sum = numbers.reduce((a, b) => a + b);
+    return sum / numbers.length;
+};
+console.log(average(arr));
