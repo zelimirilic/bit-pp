@@ -14,6 +14,6 @@ function convert (input, num1, num2) {
         return parseInt(input.toString(), num1).toString(num2);
     };
 };
-console.log(convert("c", 16, 8));
+console.log(convert("ff", 16, 8));
 
 

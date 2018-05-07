@@ -1,11 +1,7 @@
-"use strict";
- function isString(rec) {
 
-    var answer = typeof rec === 'string';
-        
-    return answer;
+arr = [];
 
-}
-
-
-console.log(isString('ovo je string'));
+for (let i = 0; i < 4; i++) {
+    arr.push(i)
+    console.log(i);
+};
