@@ -1,0 +1,44 @@
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>Modularna aplikacija</title>
+  </head>
+  <body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="navbar-brand">MODULARNA APLIKACIJA</span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="form-horizontal" id="nameform">
+    <!-- UNOS PODATAKA: -->
+    <div class="form-group">
+      <label for="entry" class="col-sm-2 control-label">Ulazni podaci</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" id="entry" size="20" placeholder="Unesite  podatke" />
+      </div>
+    </div>
+    <!-- DUGME ZA STARTOVANJE APLIKACIJE (PRORAČUN): -->
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button class="btn btn-success" id="calculate">Proračun</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEKCIJA ZA VRAĆANJE REZULTATA: -->
+  <div class="col-sm-10" id="scores">
+    <h3>REZULTAT:</h3>
+    <div id="rezultat">
+      <p>Proačunati iznos je: <span></span></p>
+    </div>
+  </div>
+
+  <!-- SEKCIJA ZA UČITAVANJE MODULA -->
+  <script src="unos.js" type="text/javascript"></script>
+  <script src="proracun.js" type="text/javascript"></script>
+  <script src="app.js" type="text/javascript"></script>
+  </body>
+</html>

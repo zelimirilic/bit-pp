@@ -2,8 +2,8 @@
 'use strict';
 function multiTwelve(num) {
     var newStr = '';
-    for (var i=1; i<=12; i++) {
-        for (var j=1; j<=12; j++) {
+    for (var i=1; i<=num; i++) {
+        for (var j=1; j<=num; j++) {
 
             newStr += j + ' * ' + i + ' = ' + i*j + '\n';
 

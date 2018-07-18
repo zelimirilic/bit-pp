@@ -9,15 +9,15 @@ function mostFrequent(arr) {
             if (arr[i] === arr[j]) {
                 brojPon++;
             }
-            if (naj < brojPon) {
-                naj = brojPon;
+            if (brojPon > naj) {
+                brojPon = naj;
                 index = arr[i];
             }
         }
-        brojPon = 0;
+        var brojPon = 0;
     }
-    return index + ' se ponavlja ' + naj + ' puta.';
+    return 'broj ' + index + ' se ponavlja ' + naj + ' puta.';
 }
 
-console.log(mostFrequent([1, 2, 1, 2, 2, 2, 3, 4, 5, 6, 7, 8, 2, 9, 2, 1, 1, 1, 1, 1]));
+console.log(mostFrequent([2, 2, 2, 2, 2, 2, 2, 1, 2, 1, 2, 2, 2, 3, 4, 5, 6, 7, 8, 2, 9, 2, 1, 1, 1, 1, 1]));
 
