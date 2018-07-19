@@ -1,17 +1,10 @@
 
 
-var obj = {
-    name: 'obj object',
-    doSomething: function (x, y, z, q, a, b) {
-        console.log(this.name + ' ' + x + ' ' + y + ' ' + z + ' ' + q + ' ' + a + ' ' + b);
-
-    }
-}
-var foo = {
-    name: 'foo object'
-}
-var bar = {
-    name: 'bar object'
+var newFun = function (x, y) {
+    var inner = 2;
+    return 'inner variable plus ' + x + ' plus ' + y + ' is ' + [x + y + inner];
 }
 
-obj.doSomething.call(foo, 1, 2, 3, 4, true, null);
+console.log(newFun(5, 10));
+console.log(newFun(15, 100));
+console.log(newFun(55, 210));

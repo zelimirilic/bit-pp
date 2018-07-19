@@ -4,6 +4,6 @@ function doSomething(param) {
     }
 }
 
-var novaFn = doSomething('Ćao prijatelju!');
+var novaFn = doSomething('Hi friend !');
 
 novaFn();
