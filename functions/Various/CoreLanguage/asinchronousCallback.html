@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script> 
+        // Long running function
+        function waitThreeSecond() {
+            var ms = 3000 + new Date().getTime();
+            while (new Date() < ms) { }
+            console.log('Function is finished !');
+        }
+
+        function clickHendler() {
+            console.log('click event !');
+        }
+        // listen for the click event
+        document.addEventListener('click', clickHendler);
+
+        waitThreeSecond();
+        console.log('Execution is finished !');
+        
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
