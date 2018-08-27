@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        section>div {
+            height: 100px;
+            width: 100px;
+            margin: 3px;
+            float: left;
+            background-color: red;
+
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+    <script type="text/babel">
+        for (let i = 1; i < 61; i++) {
+            var div = document.createElement('div');
+            div.onclick = function () {
+                alert('Kliknuo si na ' + i);
+            }
+            document.getElementsByTagName('section')[0].appendChild(div);
+        }
+
+    </script>
+    <title>Let and var</title>
+</head>
+
+<body>
+    <header>
+        <h1>Klikni na kutijče</h1>
+    </header>
+    <section></section>
+</body>
+
+</html>
