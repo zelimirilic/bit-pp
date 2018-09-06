@@ -1,4 +1,4 @@
-
+// Same as generatori.html but on js file
 
 function* director() {
     yield 'tri';

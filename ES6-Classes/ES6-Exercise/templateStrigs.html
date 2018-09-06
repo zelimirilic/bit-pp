@@ -6,22 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
-    <script type="text/babel">
-        function  createMail(firstName, kupovnaCena) {
-            var postarina = 55;
-            console.log(
-                `Hi ${firstName}, thank you to buy from us!
-                                Cena:      ${kupovnaCena} dinara
-                                Poštarina: ${postarina} dinara
-                                Ukupno:    ${kupovnaCena + postarina} dinara
-                `
-            );  
-        }
-
-        createMail('Radivojka', 1000);
-
-    </script>
+    
 
 
 
@@ -29,6 +14,23 @@
 </head>
 
 <body>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+        <script type="text/babel">
+            function  createMail(firstName, kupovnaCena) {
+                var postarina = 55;
+                console.log(
+                    `Hi ${firstName}, thank you to buy from us!
+                                    Cena:      ${kupovnaCena} dinara
+                                    Poštarina: ${postarina} dinara
+                                    Ukupno:    ${kupovnaCena + postarina} dinara
+                    `
+                );  
+            }
+    
+            createMail('Radivojka', 1000);
+    
+        </script>
 
 </body>
 

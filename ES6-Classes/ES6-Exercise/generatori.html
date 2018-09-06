@@ -1,0 +1,62 @@
+<!-- Same as generatori.js but on html file-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+
+    
+
+    <title>Generatori</title>
+</head>
+
+<body>
+
+        <script type="text/babel">
+        
+            function* director() {
+        yield 'tri';
+        yield 'dva';
+        yield 'jedan';
+        yield 'akcija !';
+    }
+    var action = director();
+    
+    console.log(action.next());
+    console.log(action.next());
+    console.log(action.next());
+    console.log(action.next());
+    console.log(action.next());
+    
+    // AND 
+    
+    function* eachItem(arr) {
+        for (var i = 0; i < arr.length; i++) {
+            yield arr[i];
+        }
+    }
+    var leters = eachItem(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']);
+    
+    var slova = setInterval(function () {
+        var leter = leters.next();
+        if (leter.done) {
+            clearInterval(slova);
+            console.log('gotova abeceda !');
+        } else {
+            console.log(leter.value);
+        }
+    }, 500);
+    
+        </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser-polyfill.js"></script>
+
+</body>
+
+</html>
