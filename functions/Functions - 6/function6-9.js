@@ -1,9 +1,9 @@
 // Write a function to find the median element of array.
-'use stgrict'
+'use strict'
 function findMedian(arr) {
     var medianapos = parseInt(arr.length / 2);
     var medianaElement = arr[medianapos];
-    return medianaElement;
+    return 'Median element is ' + medianaElement;
 
 }
 

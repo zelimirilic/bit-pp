@@ -3,6 +3,7 @@
 'use strict';
 function isSimetric(arr) {
     var mediana = parseInt(arr.length / 2);
+    
     var answer = '';
     var match = 0;
 

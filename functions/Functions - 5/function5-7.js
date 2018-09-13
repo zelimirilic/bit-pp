@@ -7,9 +7,9 @@ function firstTwo(arr) {
     var str = '';
     for (var i=0; i<arr.length; i++) {
         if(typeof arr[i] === 'string' && arr[i].length >=2) {
-            //str += arr[i][0];
-            //str += arr[i][1];
-            str += arr[i].slice(0,2);
+            str += arr[i][0];
+            str += arr[i][1];
+            //str += arr[i].slice(0,2);         or we can use slice built-in function
         }
     }
     return str;

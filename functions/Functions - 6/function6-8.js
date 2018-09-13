@@ -3,7 +3,7 @@
 function maxMin(arr) {
     var max = arr[0];
     var min = arr[0];
-    
+
     for (var i = 0; i < arr.length; i++) {
         if (arr[i] > max) {
             max = arr[i];
@@ -12,6 +12,6 @@ function maxMin(arr) {
             min = arr[i];
         }
     }
-    return 'maximun number is ' + max + ' and ' + 'minimum number is ' + min + '.';
+    return 'Maximun number is ' + max + ' and minimum number is ' + min + '.';
 }
 console.log(maxMin([4, 1, 2, 3, 4, 5, 7, 8, 9, 5]))

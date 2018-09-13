@@ -2,12 +2,12 @@ function brojPonavljanjaSlova(rec, trazenoSlovo) {
 
     var brojPonavljanja = 0;
     var duzinaReci = rec.length;
-    for (var pozicijaSlova = 0; pozicijaSlova < duzinaReci;pozicijaSlova++) {
+    for (var i = 0; i < duzinaReci; i++) {
 
-        var trenutnoSlovoIzReci = rec[pozicijaSlova];
+        var trenutnoSlovoIzReci = rec[i];
         if (trenutnoSlovoIzReci === trazenoSlovo) {
 
-            brojPonavljanja ++;
+            brojPonavljanja++;
 
         }
 

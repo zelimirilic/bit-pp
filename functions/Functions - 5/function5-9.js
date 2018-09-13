@@ -13,8 +13,8 @@ function combOfTwo(num1, num2) {
             }
         }
     }
-    string += counter;
+    
     return string;
 }
 
-console.log(combOfTwo(5, 7));
+console.log(combOfTwo(1, 7));

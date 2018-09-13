@@ -30,6 +30,6 @@ function compBMI(weight, height) {
     return bodyMassIndex;
 }
 
-console.log(compBMI(82, 1.85));
+console.log(compBMI(85, 1.85));
 
 

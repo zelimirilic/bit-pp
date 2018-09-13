@@ -3,6 +3,12 @@
 // Output: true  | false
 'use strict';
 function isPrime(num) {
+    if(num === 1) {
+        return 'Broj 1 nije ni prost ni slozen broj !';
+    }
+    if(num === 2) {
+        return true;
+    }
     for (var i = 2; i < num; i++) {
         if (num % i === 0) {
             return false;
@@ -11,4 +17,4 @@ function isPrime(num) {
     }
    return true; 
 }
-console.log(isPrime(17));
+console.log(isPrime(43));

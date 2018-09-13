@@ -2,9 +2,9 @@
 // Input:  Belgrade Institute of Technology
 // Output: ygolonhceT fo etutitsnI edargleB
 'use strict';
-function reverString(str) {
+function reverseString(str) {
     var newStr = '';
-    for (var i=str.length-1; i>=0; i--) {
+    for (var i = str.length - 1; i >= 0; i--) {
         newStr += str[i];
 
     }
@@ -12,4 +12,4 @@ function reverString(str) {
 
 }
 
-console.log(reverString('Belgrade Institute of Technology'));
+console.log(reverseString('ygolonhceT fo etutitsnI edargleB'));

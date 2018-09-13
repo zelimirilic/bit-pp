@@ -5,26 +5,27 @@ function hideAddress(str) {
     var cut = "...";
     var first = "";
     var second = "";
-    var secondFinal = "";
-    for (var i = 0; i < (str.length) / 2; i++) {
+    var firstFinal = "";
+    var monkey = str.indexOf('@');
+    for (var i = 0; i < monkey; i++) {
         first += str[i];
-        
+
     }
     console.log(first);
-    for (var j = (str.length) / 2; j < str.length; j++) {
+    for (var j = monkey; j < str.length; j++) {
         second += str[j];
-       
+
     }
     console.log(second);
-    for (var k = 3; k < second.length; k++) {
-        secondFinal += second[k];
-        
+    for (var k = 0; k < first.length - (first.length / 2); k++) {
+        firstFinal += first[k];
+
     }
-    console.log(secondFinal);
-    hideEmail = first + cut + secondFinal;
+    console.log(firstFinal);
+    hideEmail = firstFinal + cut + second;
 
     return hideEmail;
 }
 
-console.log(hideAddress("myemailaddress@bgit.rs"));
+console.log(hideAddress("isprednesto_zelimir.ilic@gmail.rs"));
 // konzolu sam stampao da vidim izvrsenje programa.....

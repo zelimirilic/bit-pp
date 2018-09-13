@@ -7,8 +7,9 @@ function reverseNum(num) {
 
     }
     newNum = parseInt(newStr);
+    // console.log(typeof newNum);  only chek typeof from variable
 
     return newNum;
 }
-
-console.log(reverseNum(12345));
+var g = reverseNum(12345)
+console.log(g);

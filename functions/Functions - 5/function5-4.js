@@ -4,19 +4,18 @@
 //Output: [ 2, 10, 12, 16, 22, 24, 26, 30 ]
 'use strict';
 function sortArr(arr, callback) {
-    var sortArr = [];
-    sortArr = arr.sort(function (a, b) {
+    var niz = [];
+    niz = arr.sort(function (a, b) {
         return a - b
     });
-    for (var i = 0; i < sortArr.length; i++) {
-        sortArr[i] = callback(sortArr[i]);
+    for (var i = 0; i < niz.length; i++) {
+        niz[i] = callback(niz[i]);
     }
-    return sortArr;
+    return niz;
+}
+function multBy2(niz) {
+
+    return niz * 2;
 }
 
 console.log(sortArr([13, 11, 15, 5, 6, 1, 8, 12], multBy2));
-
-function multBy2(arr) {
-
-    return arr * 2;
-}

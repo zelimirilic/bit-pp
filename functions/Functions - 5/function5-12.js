@@ -7,14 +7,12 @@
 function findNZD(num1, num2) {
     var x = Math.abs(num1);
     var y = Math.abs(num2);
-    var min = Math.min(x,y); 
-    for(var i=min; i>0; i--) {
-        if(x % i === 0 && y % i ===0) {
+    var min = Math.min(x, y);
+    for (var i = min; i > 0; i--) {
+        if (x % i === 0 && y % i === 0) {
             return i;
         }
     }
-
 }
 
-console.log(findNZD(192, 42));
-
+console.log(findNZD(-192, -42));

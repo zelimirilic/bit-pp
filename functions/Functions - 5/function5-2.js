@@ -7,14 +7,13 @@ function divAndadd(arr) {
     for (var i = 0; i < arr.length; i++) {
 
         arr[i] = arr[i] / 2 + 5;
-
         if (arr[i] === 0) {
             arr[i] = 20;
-
         }
+
     }
     return arr;
 }
 
-console.log(divAndadd([3, 500, -10, 149, 53, 414, 1, 19]));
+console.log(divAndadd([3, 500, -10, 149, 53, 414, 0, 19]));
 

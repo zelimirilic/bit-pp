@@ -22,5 +22,5 @@ function switchMinMax(arr) {
     return arr;
 }
 
-console.log(switchMinMax([3, 500, 1221, 149, 53, 414, 1, 19]));
+console.log(switchMinMax([3, 5000, 1221, 149, 53, 414, 1, 19]));
 

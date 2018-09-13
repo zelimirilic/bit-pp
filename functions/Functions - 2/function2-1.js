@@ -16,16 +16,16 @@ console.log(isString(6));
 
 
 
-// function isString(rec) {
+ function isString1(rec) {
 
-//     var answer = typeof rec === 'string';
+    var answer = typeof rec === 'string';
         
-//     return answer;
+    return answer;
 
-// }
+ }
 
 
-// console.log(isString(5));
+console.log(isString1(5));
 
 
 

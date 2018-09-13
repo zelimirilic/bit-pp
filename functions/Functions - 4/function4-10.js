@@ -3,15 +3,16 @@
 'use strict'
 function insertEl(el, pos, arr) {
     var newArr = [];
-    var counter = 0;
+    if (pos > arr.length) {
+        console.log('This array does not have ' + pos + ' members !')
+    }
     for (var i = 0; i < arr.length; i++) {
         if (i === pos) {
             arr[i] = el;
         }
-        newArr[counter] = arr[i];
-        counter++;
+        newArr[i] = arr[i];
     }
+
     return newArr;
 }
-
-console.log(insertEl('wow', 3, [0, 1, 2, 3, 4, 5, 6, 7, 8]));
+console.log(insertEl('wow', 4, [0, 1, 2, 3, 4, 5, 6, 7, 8]));

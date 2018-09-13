@@ -26,11 +26,11 @@ function printRec(arr) {
                     
                         picture += arr[k];
                     
+                    }
                 }
             }
         }
         picture += newline;
-    }
     return picture;
 }
 

@@ -1,13 +1,13 @@
 "use strict";
 function multiString(rec, brojPuta) {
 
-var nasaRec="";
+    var nasaRec = "";
 
-for (var i=0; i<brojPuta; i++) {
+    for (var i = 0; i < brojPuta; i++) {
 
-    nasaRec+=rec;
+        nasaRec += ' ' + rec;
+    }
+    return nasaRec;
 }
-return nasaRec;
-}
 
-console.log(multiString('Zeljko',3));
+console.log(multiString('Zeljko', 3));

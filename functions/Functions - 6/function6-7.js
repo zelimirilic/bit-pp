@@ -22,5 +22,5 @@ function maxElArr(arrNum) {
     return maxNum;
 }
 
-console.log(maxElArr([1, 3, true, 15, 'string', 5, 7, 9, 12]));
+console.log(maxElArr([221899, 3, true, 15, 'string', 5, 7, 9, 1222, 45987]));
 

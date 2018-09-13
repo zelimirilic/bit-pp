@@ -2,15 +2,15 @@
 // Input:  [ 13, 11, 15, 5, 6, 1, 8, 12 ]
 // Output: [ 15, 13, 12, 11, 8, 6, 5, 1 ]
 'use strict';
-function sortArr(arr, callback) {
-    var sortArr = [];
-    sortArr = arr.sort(function (a, b) {
+function sortArr(arr) {
+    var niz = [];
+    niz = arr.sort(function (a, b) {
         return b - a;
     });
     for (var i = 0; i < sortArr.length; i++) {
-        sortArr[i] += arr[i];
+        niz[i] = arr[i];
     }
-    return sortArr;
+    return niz;
 }
 
 console.log(sortArr([13, 11, 15, 5, 6, 1, 8, 12]));

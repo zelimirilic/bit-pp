@@ -17,9 +17,10 @@ function square(num) {
         for (var j = 0; j < num; j++) {
             if (i === 0 || i === num - 1) {
                 draw += star;
-
-            } else if (j == 0 || j === num - 1) {
+                console.log(draw)
+            } else if (j === 0 || j === num - 1) {
                 draw += star;
+                console.log(draw)
             } else {
                 draw += " ";
             }
@@ -28,4 +29,4 @@ function square(num) {
     }
     return draw;
 }
-console.log(square(5));
+console.log(square(7));

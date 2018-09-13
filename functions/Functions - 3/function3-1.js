@@ -20,5 +20,5 @@ function insertString(input, string, place) {
     return newString;
 }
 
-console.log(insertString("js", "moja recenica je lepa", 13));
+console.log(insertString("JavaScript", "moja recenica je lepa", 13));
 

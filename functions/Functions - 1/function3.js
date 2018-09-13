@@ -7,4 +7,4 @@ function num(x) {
     }
 }
 
-console.log(num(1230));
+console.log(num(123));

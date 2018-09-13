@@ -1,3 +1,5 @@
+//Od nazad counter
+
 function occ(str, char) {
    
     for (var i = str.length; i >= 0; i--) {
@@ -10,4 +12,4 @@ function occ(str, char) {
         return -1;
 }
 
-console.log(occ("mythokmkm", "m"));
+console.log(occ("fmythokmkm", "m"));

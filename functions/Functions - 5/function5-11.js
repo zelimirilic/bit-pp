@@ -5,17 +5,15 @@
 
 function palindrome(str) {
     var str = str.toLowerCase();
+    var str = str.replace(/ /g, '');
     var newStr = '';
     for (var i = str.length - 1; i >= 0; i--) {
         newStr += str[i];
     }
     if (str === newStr) {
         return true;
-
     }
-
     return false;
 }
 
-
-console.log(palindrome("eye"));
+console.log(palindrome("Ana voli Milovana"));

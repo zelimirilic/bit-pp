@@ -1,17 +1,17 @@
 function prostBroj(num) {
     if (num === 1) {
-        return false;
+        return 'Nije prost';
     } else if (num === 2) {
-        return true;
+        return 'Prost je';
     } else {
         for (var i = 2; i < num; i++) {
             if (num % i === 0) {
-                return false;
-            }  
+                return 'nije prost';
+            }
         }
 
-        return true;
+        return 'Prost je !!!';
     }
 }
 
-    console.log(prostBroj(37));
+console.log(prostBroj(37));
