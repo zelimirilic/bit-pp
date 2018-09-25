@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Functions</title>
+</head>
+
+<body>
+
+    <script>
+
+        const avangarda = [
+            { name: 'Metuzalem', surname: 'Jović', year: 1379, died: 1355 },
+            { name: 'Albert', surname: 'Anštajn', year: 1879, died: 1955 },
+            { name: 'Isak', surname: 'Njutn', year: 1643, died: 1727 },
+            { name: 'Max', surname: 'Plank', year: 1858, died: 1947 },
+            { name: 'Ivo', surname: 'Andrić', year: 1892, died: 1975 },
+            { name: 'Tito', surname: 'Broz', year: 1892, died: 1980 },
+            { name: 'Bella', surname: 'Gutman', year: 1901, died: 1965 },
+            { name: 'Hiro', surname: 'Onoda', year: 1921, died: 2003 }
+        ];
+
+        const people = ['Petrović, Đoka', 'Beckett, Samuel', 'Bergman, Ingrid', 'Bergman, Ingmar', 'Šain, Đoka', 'Keljemendi, Bucomir', 'Raša, Sulejman', 'Platz, Aleksandar', 'Ciganović, Giba', 'Petrović, Lidija', 'Lezbinski, Moronka', 'Onoda, Hiro', 'Gutman, Bella', 'Petrović, Vladimir', 'Stanojčević, Roman', 'Eco, Umberto', 'Ilić, Nikolina'];
+        const afterFifteenCent = avangarda.filter(yOfBirth => (yOfBirth.year >= 1500 && yOfBirth.year < 1700));
+        console.table(afterFifteenCent);
+
+        const fullName = avangarda.map(a => (`${a.name} ${a.surname}`));
+        console.table(fullName);
+        /*
+        const ordered = avangarda.sort(function(a,b) {
+            if(a.year>b.year) {
+                return 1;
+            } else {
+                return -1;
+            }
+        })
+        console.table(ordered);
+        */
+        const ordered = avangarda.sort((a, b) => a.year > b.year ? 1 : -1);
+        console.table(ordered);
+
+        var totalYear = 0;
+        for (var i = 0; i < avangarda.length; i++) {
+            totalYear += avangarda[i].year;
+        }
+        console.log(totalYear);
+
+
+        const totalY = avangarda.reduce((total, insane) => {
+            return total + insane.year;
+        }, 0);
+        console.log(totalY);
+
+        const yangestDie = avangarda.sort(function (a, b) {
+            const yangInsane = a.died - a.year;
+            const oldInsane = b.died - b.year;
+            return yangInsane > oldInsane ? 1 : -1;
+        })
+        console.table(yangestDie);
+
+        const alpha = people.sort(function (lastOne, nextOne) {
+            const part = lastOne.split(', ');
+            console.log(part);
+        })
+
+    </script>
+
+</body>
+
+</html>
