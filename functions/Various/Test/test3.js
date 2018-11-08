@@ -1,7 +1,7 @@
 
 
 function add(a,b) {
-     var a = 10;
+    var a = 10;
     console.log(a+b);
 }
 

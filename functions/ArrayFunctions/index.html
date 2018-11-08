@@ -61,10 +61,22 @@
         })
         console.table(yangestDie);
 
-        const alpha = people.sort(function (lastOne, nextOne) {
-            const part = lastOne.split(', ');
-            console.log(part);
+        const alpha = people.sort((lastOne, nextOne) => {
+            const [a, b] = lastOne.split(', ');
+            const [c, d] = nextOne.split(', ');
+            return lastOne > nextOne ? 1 : -1;
         })
+        console.log(alpha);
+
+        const data = ['Petrović', 'Đoka', 'Beckett', 'Đoka', 'Đoka', 'MalaNikolina', 'Samuel', 'Bergman', 'Ingrid', 'Bergman', 'Ingmar', 'Šain', 'Đoka', 'Đoka', 'Petrović'];
+        const reducerFun = data.reduce(function (obj, item) {
+            if (!obj[item]) {
+                obj[item] = 0;
+            }
+            obj[item]++;
+            return obj;
+        }, {})
+        console.log(reducerFun);
 
     </script>
 

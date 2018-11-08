@@ -1,5 +1,5 @@
 function reverseArr(array) {
-    for (i = 0, j = array.length - 1; i < j; i++, j--) {
+    for (i = 0, j = array.length-1; i < j; i++, j--) {
         rev = array[i];
         array[i] = array[j];
         array[j] = rev;
