@@ -1,10 +1,9 @@
-var age = 56;
+function getIcon(danish, apb) {
+  
+    var x = danish + apb;
+    return x;
+}
 
+var status = getIcon(2,3);
 
-
-if(age <= 2) 
-console.log('Mleko');
-else if (age < 21)
-console.log('Soda');
-else
-console.log('C2H5OH');
+console.log(status);
