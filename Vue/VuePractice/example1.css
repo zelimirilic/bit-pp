@@ -1,0 +1,24 @@
+.demo1 {
+    width: 80%;
+    height: 80%;
+    background-color: rgb(218, 162, 162);
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .demo2 { 
+    width: 80%;
+    height: 80%;
+    background-color: rgb(129, 152, 202);
+    display: inline-block;
+    margin: 10px;
+  }
+  
+  .demo3 {
+    width: 80%;
+    height: 80%;
+    background-color: rgb(128, 57, 122);
+    display: inline-block;
+    margin: 10px;
+  }
+  
