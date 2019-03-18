@@ -24,8 +24,18 @@
     <script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <div id="plural">
+        <div v-on:contextmenu.prevent="onBlockClick">
+            Click in this areawith the right mouse button
+        </div>
 
-        <h1 v-text="appName" v-bind:class="[accentColor, headers]"></h1>
+        <ul id="myContextMenu" v-if="showContextMenu" v-on:blur="closeContextMenu" v-bind:style="{top:top, left:left}">
+            <li>
+                <a href="#" v-on:click="onCopyClick">Copy</a>
+            </li>
+            <li>
+                <a href="#" v-on:click="onPasteClick">Paste</a>
+            </li>
+        </ul>
 
     </div>
 

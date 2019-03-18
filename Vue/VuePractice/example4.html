@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <div id="pivara">
+        <div>
+            <label><strong>Max Alcohol by Volume(a.b.v.)</strong></label>
+            <br>
+            <hr>
+
+            <input type="range" v-model="maxAbv" min="0" max="20" />
+            <small>{{ maxAbv}} </small>
+        </div>
+
+        <ul>
+            <li><strong>Beers</strong></li>
+            <li
+                v-for="i in beers"
+                v-if="i.abv < maxAbv">
+                {{ i }}
+
+            </li>
+        </ul>
+    </div>
+
+
+    <script src="example4.js"></script>
+</body>
+
+</html>
