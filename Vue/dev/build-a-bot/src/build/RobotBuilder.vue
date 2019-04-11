@@ -1,10 +1,11 @@
 <template>
-  <div>
+  <div class="content">
+      <button class="add-to-cart" v-on:click="addToCart()">Add to Cart</button>
     <div class="top-row">
       <div class="top part">
           <div class="robot-name">
               {{selectedRobot.head.title}}
-              <span v-if="selectedRobot.head.onSale" class="sale">Sale!</span>
+              <span v-show="selectedRobot.head.onSale" class="sale">Sale!</span>
           </div>
         <img v-bind:src="selectedRobot.head.src" title="head">
         <button v-on:click="selectPreviousHead()" class="prev-selector">&#9668;</button>
@@ -31,10 +32,26 @@
     <div class="bottom-row">
       <div class="bottom part">
         <img v-bind:src="selectedRobot.bases.src" title="bases">
-        <div class="price">Cost: {{selectedRobot.bases.cost}}</div>
         <button v-on:click="selectPreviousBases()" class="prev-selector">&#9668;</button>
         <button v-on:click="selectNextBases()" class="next-selector">&#9658;</button>
       </div>
+    </div>
+    <div>
+        <h1 class="cart">Cart</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Robot</th>
+                    <th class="price">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(robot, index) in cart" v-bind:key="index">
+                    <td>{{robot.head.title}}</td>
+                    <td class="price">{{robot.cost}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
   </div>
 </template>
@@ -42,16 +59,16 @@
 <script>
 import robotParts from "../data/parts.js";
 import parts from '../data/parts.js';
-const cost = parts.bases.cost;
+
 
 function getPreviousIndex(index, length) {
   const decreaseIndex = index - 1;
-  console.log(decreaseIndex);
+  //console.log(decreaseIndex); -   just for control flow
   return decreaseIndex < 0 ? length - 1 : decreaseIndex;
 }
 function getNextIndex(index, length) {
   const increaseIndex = index + 1;
-  console.log(increaseIndex);
+  //console.log(increaseIndex); - -   just for control flow
   return increaseIndex > length - 1 ? 0 : increaseIndex;
 }
 
@@ -60,7 +77,7 @@ export default {
   data() {
     return {
       robotParts,
-      cost,
+      cart:[],
       selectedHeadIndex: 0,
       selectedLeftArmIndex: 0,
       selectedTorsosIndex: 0,
@@ -80,6 +97,11 @@ export default {
         },
     },
   methods: {
+      addToCart() {
+          const robot = this.selectedRobot;
+          const cost = robot.head.cost + robot.leftArm.cost + robot.torsos.cost + robot.rightArm.cost + robot.bases.cost;
+          this.cart.push(Object.assign({}, robot, {cost}));
+      },
     selectNextHead() {
       this.selectedHeadIndex = getNextIndex(
         this.selectedHeadIndex,
@@ -242,6 +264,27 @@ export default {
 }
 .sale {
     color: red;
+}
+.content {
+    position: relative;
+}
+.add-to-cart {
+    position: absolute;
+    right: 30px;
+    width: 220px;
+    padding: 3px;
+    font-size: 16px;
+}
+td, th {
+    text-align: left;
+    padding: 5px;
+    padding-right: 20px;
+}
+.price {
+    text-align: right;
+}
+.cart {
+text-align:left;
 }
 </style>
 
