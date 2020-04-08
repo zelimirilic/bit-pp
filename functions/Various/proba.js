@@ -1,10 +1,5 @@
-'use strict';
-
-let userName ='Zeljko';
 
 
-console.log(userName);
 
-var undefined = 5;
+let hobies =['plivanje'];
 
-console.log(undefined);
